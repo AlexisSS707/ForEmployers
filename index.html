@@ -1,0 +1,47 @@
+<html>
+   <head>
+        <meta charset="UTF-8">
+        <title>Hire Me!</title>
+        <script src='index.js'></script>
+        <link rel="stylesheet" type="text/css" href="design.css">
+   </head>
+   <body>
+      <p id="question">Hey, you! Are you looking for a web designer/developer? Want to give me a try?</p>
+	   
+	  <p id="hidden" class="hidden"> Great! Here is some information you can look at <br>
+		   <a href="https://www.linkedin.com/in/alexis-s-silver-26088113b/">LinkedIn</a><br>
+		   <a href="https://github.com/AlexisSS707">GitHub(but of course you already know)</a><br>
+		   Skills I am proud of: </p><ul id = "list" class = "hidden">
+	   <li>HTML</li>
+	   <li>CSS</li>
+	   <li>JavaScript(and made a mini Visual Novel game!)</li>
+	   <li>making music with Python (I can do more, but I'm talking about the proud things)</li>
+	   <li>I know Microsoft Office like the back of my hand.</li>
+	   <li>learned about Linux and node.js</li>
+	   <li> And I made this simple thing</li>
+	   </ul>
+	   <!--https://stackoverflow.com/questions/6068863/image-appearing-when-clicking-a-button -->
+	   
+    <input id="push" type="button" onclick="pushYes()" value="Yes" /> 
+    <input id="push" type="button" onclick="pushNo()" value="No" /> 
+        <script>
+        var please = new Audio('media/encounter.mp3');
+          /*Persona 5 OST - Encounter plays*/ 
+	     please.addEventListener('ended', function() {
+		   this.currentTime = 0;
+		   this.play();
+		}, false);
+        function pushYes(){
+		   document.getElementById('hidden').style.display = 'block';
+			document.getElementById('list').style.display = 'block';
+        }
+        function pushNo(){
+            alert("Aw, that stinks. I really wanted to live my life doing this and more.");
+            self.close();
+      }  
+        </script>
+        <footer>
+           I will add more stuff if I see fit.
+        </footer>
+    </body>
+</html>
